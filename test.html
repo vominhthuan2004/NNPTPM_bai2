@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>VIEWS</th>
+                </tr>
+            </thead>
+            <tbody id="body_table">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Post Form -->
+    <div class="section">
+        <h2>Add/Edit Post</h2>
+        <input type="text" id="id_txt" placeholder="ID (auto-generated for new)" readonly/>
+        <input type="text" id="title_txt" placeholder="Title"/>
+        <input type="number" id="view_txt" placeholder="Views"/>
+        <input type="submit" value="Save" onclick="Save()">
+        <input type="button" value="Clear" onclick="ClearForm()">
+    </div>
+
+    <!-- Comments Section -->
+    <div class="section">
+        <h2>Comments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TEXT</th>
+                    <th>POST ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="comments_table">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Comment Form -->
+    <div class="section">
+        <h2>Add/Edit Comment</h2>
+        <input type="text" id="comment_id_txt" placeholder="ID (auto-generated for new)" readonly/>
+        <input type="text" id="comment_text_txt" placeholder="Comment Text"/>
+        <input type="number" id="comment_postId_txt" placeholder="Post ID"/>
+        <input type="submit" value="Save" onclick="SaveComment()">
+        <input type="button" value="Clear" onclick="ClearCommentForm()">
+    </div>
+</body>
+</html>
